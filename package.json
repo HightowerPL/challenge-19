@@ -1,0 +1,16 @@
+{
+  "name": "jakub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "\u001b[A\u001b[B"
+  },
+  "author": "",
+  "license": "ISC"
+}

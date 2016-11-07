@@ -1,0 +1,322 @@
+@import "media";
+@import "components/variables";
+@import "components/modal";
+@import "components/flex";
+@import "components/fonts";
+@import "components/slider";
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+// styles.scss
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+a:link{
+  color: inherit;
+  text-decoration: none;
+}
+.small-menu{
+  display: none;
+}
+header{
+  position:fixed;
+  z-index:5;
+  width:100%;
+  top:0;
+  //height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: $violet;
+  box-shadow: 1px 1px 1px rgba(0,0,0, 0.3);
+  ul{
+    list-style-type: none;
+    li{
+      font-size: 18px;
+      color: $gray !important;
+      display: inline-block;
+      padding-right: 60px;
+      vertical-align: middle;
+      img{
+        width: 50px;
+        height: 50px;
+      }
+      a:hover{
+        color: $violet;
+      }
+    }
+  }
+  .menuSrc{
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    float: right;
+    padding:7px 0 7px 0;
+    margin-right: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    .menuSrcSubmit{
+      display: flex;
+      background: url('../components/img/search-icon.png') no-repeat center center;
+      background-size: 15px 15px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      flex-grow: 1;
+      -moz-transition: transform .4s;
+      -webkit-transition: transform .4s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    .menuSrcText{
+      flex-grow: 3;
+      padding-left: 5px;
+      display: flex;
+      color: $violet;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      border: none;
+    }
+  }
+}
+.jumbotron{
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  height: 600px;
+  background-image: url('../components/img/flyPanel-bg.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1{
+    text-align: middle;
+  }
+  .flightSearch{
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+    padding: 0;
+    background-color: $violet;
+    color: white;
+    position: absolute;
+    z-index: 3;
+    bottom: -105%;
+    width: 100%;
+    height: 150px;
+    form{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      .people{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+          width:12px;
+          height:12px;
+        }
+        input[type="number"]{
+          -moz-appearance: textfield;
+          overflow: visible;
+          font-size: 16px;
+          width: 50px;
+          background: url('../components/img/group-icon.png') no-repeat center left;
+          background-size: 25px 20px;
+          padding-left:40px;
+        }
+      }
+      input{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        background-color: $violet;
+        color: white;
+        border: none;
+        margin: 0 0 0 0;
+        overflow: visible;
+        &[type="text"]{
+          font-weight: 100;
+          margin: 0 40px 0 40px;
+          letter-spacing: 2px;
+          line-height: 2.5;
+          border-bottom: 2px solid rgba(255,255,255,.3);
+        }
+        &[type="date"]{
+          background: url('../components/img/calendar-icon.png') no-repeat center left;
+          background-size: 20px 20px;
+          width:90px;
+          padding-left:40px;
+        }
+        &[type="submit"]{
+          box-shadow: -10px 0px 15px rgba(0,0,0,0.3);
+          justify-content: flex-end;
+          background-color: $lightVio;
+          font-size: 36px;
+          cursor: pointer;
+          min-width: 100px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.endLink{
+  font-size: 16px;
+  font-weight: 700;
+  color: $violet;
+  padding: 15px 55px 15px 55px;
+  border: 2px solid $violet;
+  -moz-transition: background-color .4s, color .4s;
+  &:hover{
+    background-color: $violet;
+  }
+}
+.whitePanel{
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 0 rgba(0,0,0,.2);
+}
+.wp1{
+  padding: 100px 0 100px 0;
+  text-align: center;
+  margin: 0 auto;
+  color: $gray;
+  background-color: white;
+  .images{
+    padding-top: 40px;
+    img{
+      vertical-align: middle;
+      width: 100px;
+      &.palm{
+        float: left;
+      }
+      &.dollar{
+        float: right;
+      }
+    }
+  }
+}
+.pause{
+  position: relative;
+  z-index: 1;
+  height: 170px;
+  background-position: center center;
+  background-size: contain;
+  &.p1{
+    background-image: url('../components/img/pauseOne.jpg');
+  }
+  &.p2{
+    background-image: url('../components/img/pauseTwo.jpg');
+  }
+}
+
+.wp2{
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0 100px 0;
+  text-align: center;
+  color: $gray;
+  background-color: white;
+  .endLink{
+    color: $violet;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+.wp3{
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0 100px 0;
+  text-align: center;
+  color: $gray;
+  background-color: white;
+  i{
+    vertical-align: top;
+    color: $violet;
+  }
+  .line{
+    display: flex;
+    align-items: center;
+    hr{
+      border: 2px solid $violet;
+  	  text-align: center;
+      &.v1{
+        float: left;
+        width: 42%;
+      }
+      &.v2{
+        float: right;
+        width: 42%;
+      }
+    }
+  }
+  h1{
+    color: $gray;
+  }
+  .slider{
+    position: relative;
+    .slideLeft, .slideRight{
+      position: absolute;
+      width: 150px;
+      z-index: 3;
+      height: 100%;
+      background-color: black;
+      opacity: 0;
+      transition: opacity .4s;
+      &:hover{
+        opacity: 0.6;
+      }
+    }
+    .slideLeft{
+      left:0;
+    }
+    .slideRight{
+      right: 0;
+    }
+  }
+  .endLink{
+    width: 800px;
+    color: $violet;
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 170px;
+  background-image: url('../components/img/pauseTwo.jpg');
+  background-position: center center;
+  background-size: contain;
+  img{
+    margin: 0 auto;
+    width: 150px;
+  }
+}

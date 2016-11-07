@@ -1,0 +1,69 @@
+////Flex
+.cities{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+  margin-bottom: 100px;
+}
+
+.destination{
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  position: relative;
+  text-align: bottom;
+  p{
+    padding-top: 85%;
+    font-weight: bold;
+  }
+  &:hover{
+    .photoOne{
+      -moz-transform: rotate(-14deg);
+      transform: rotate(-14deg);
+    }
+    .photoTwo{
+      -moz-transform: rotate(-7deg);
+      transform: rotate(-7deg);
+    }
+  }
+
+}
+.photoOne{
+  box-shadow: 0px 1px 1px gray;
+  position: absolute;
+  top: 62.5px;
+  left: 62.5px;
+  width: 225px;
+  height:225px;
+  background-color: #ebebeb;
+  transition: transform 1s;
+}
+.photoTwo{
+  box-shadow: 0px 1px 1px gray;
+  position: absolute;
+  top: 62.5px;
+  left: 62.5px;
+  width: 225px;
+  height:225px;
+  background-color: #e1e1e1;
+  transition: transform 1s;
+
+}
+.photoThree{
+  box-shadow: 0px 1px 1px gray;
+  cursor: pointer;
+  position: absolute;
+  top: 62.5px;
+  left: 62.5px;
+  width: 225px;
+  height:225px;
+  background-color: #ebebeb;
+  img{
+    vertical-align: top;
+    padding: 35% 0 0 0;
+    width:50px;
+  }
+}
