@@ -9,13 +9,13 @@ $('#down').on('click', function(){
    field.stepDown(1);
    return false;
  });
-
+/*
 $(document).ready(function(){
   if ($(window).width() <= 640) {
     $("header").hide();
   }
 });
-
+*/
  $(".smallMenuButton").click(function(){
     $("header").slideToggle(800);
  });

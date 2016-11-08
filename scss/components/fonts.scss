@@ -76,3 +76,22 @@ form{
   font-size: 1.25rem;
   transform: rotate(45deg) ;
 }
+.quote{
+  .markBegin{
+    position: absolute;
+    top: 10px;
+    left:20px;
+    font-family: 'Playfair Display', sans-serif;
+    letter-spacing: 0;
+    color: $gray;
+    font-size: 56px;
+  }
+  .markEnd{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    color: $gray;
+    font-size: 56px;
+  }
+}

@@ -20,50 +20,33 @@
     font-weight: bold;
   }
   &:hover{
-    .photoOne{
+    .pOne{
       -moz-transform: rotate(-14deg);
       transform: rotate(-14deg);
     }
-    .photoTwo{
+    .pTwo{
       -moz-transform: rotate(-7deg);
       transform: rotate(-7deg);
     }
   }
 
 }
-.photoOne{
+.photo{
   box-shadow: 0px 1px 1px gray;
   position: absolute;
   top: 62.5px;
   left: 62.5px;
   width: 225px;
   height:225px;
-  background-color: #ebebeb;
   transition: transform 1s;
-}
-.photoTwo{
-  box-shadow: 0px 1px 1px gray;
-  position: absolute;
-  top: 62.5px;
-  left: 62.5px;
-  width: 225px;
-  height:225px;
-  background-color: #e1e1e1;
-  transition: transform 1s;
-
-}
-.photoThree{
-  box-shadow: 0px 1px 1px gray;
-  cursor: pointer;
-  position: absolute;
-  top: 62.5px;
-  left: 62.5px;
-  width: 225px;
-  height:225px;
-  background-color: #ebebeb;
-  img{
-    vertical-align: top;
-    padding: 35% 0 0 0;
-    width:50px;
+  &.pOne{
+    background-color: #ebebeb;
+  }
+  &.pTwo{
+    background-color: #e1e1e1;
+  }
+  &.pThree{
+    background: #ebebeb url('../components/img/photo.png') no-repeat center center;
+    background-size: 30% 25%;
   }
 }

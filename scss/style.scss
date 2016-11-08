@@ -21,15 +21,27 @@ a:link{
   color: inherit;
   text-decoration: none;
 }
-.small-menu{
-  display: none;
+.smallMenu{
+  width: 100%;
+  height: 70px;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  box-shadow: 1px 1px 1px rgba(0,0,0, 0.3);
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+  cursor: pointer;
+  visibility: hidden;
+  @media (max-width: 640px) {
+    visibility: visible;
+  }
 }
 header{
   position:fixed;
   z-index:5;
   width:100%;
   top:0;
-  //height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,6 +57,9 @@ header{
       display: inline-block;
       padding-right: 60px;
       vertical-align: middle;
+      @media (min-width: 640px) and (max-width: 1100px){
+        padding-right: 40px;
+      }
       img{
         width: 50px;
         height: 50px;
@@ -86,6 +101,29 @@ header{
       font-weight: 500;
       font-size: 12px;
       border: none;
+    }
+  }
+  @media (min-width: 640px) and (max-width: 1100px){
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+  }
+  @media (max-width: 640px) {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    .menu{
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      li{
+        text-align: center;
+        display: block;
+        padding: 0px 0 20px 0;
+      }
     }
   }
 }
@@ -187,6 +225,7 @@ header{
   -moz-transition: background-color .4s, color .4s;
   &:hover{
     background-color: $violet;
+    color: $white;
   }
 }
 .whitePanel{
@@ -219,7 +258,8 @@ header{
   z-index: 1;
   height: 170px;
   background-position: center center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   &.p1{
     background-image: url('../components/img/pauseOne.jpg');
   }
@@ -275,27 +315,7 @@ header{
   h1{
     color: $gray;
   }
-  .slider{
-    position: relative;
-    .slideLeft, .slideRight{
-      position: absolute;
-      width: 150px;
-      z-index: 3;
-      height: 100%;
-      background-color: black;
-      opacity: 0;
-      transition: opacity .4s;
-      &:hover{
-        opacity: 0.6;
-      }
-    }
-    .slideLeft{
-      left:0;
-    }
-    .slideRight{
-      right: 0;
-    }
-  }
+
   .endLink{
     width: 800px;
     color: $violet;
