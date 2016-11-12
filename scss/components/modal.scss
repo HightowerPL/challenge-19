@@ -29,7 +29,7 @@
      overflow: scroll;
      .close {
          background: $violet;
-         color: $white;
+         color: $backgroundColor;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -47,9 +47,10 @@
          -moz-box-shadow: 1px 1px 3px #000;
          -webkit-box-shadow: 1px 1px 3px #000;
          box-shadow: 1px 1px 3px #000;
+         -webkit-transition: background .4s, color .4s;
          -moz-transition: background .4s, color .4s;
          &:hover{
-           background: $white;
+           background: $backgroundColor;
            color: $violet;
          }
      }
@@ -79,7 +80,7 @@
     .cityDescription{
       height: 100%;
       padding: 5px 10px 13px 10px;
-      background: $white;
+      background: $backgroundColor;
       text-align: left;
       .endLink{
         width: 25%;
@@ -87,6 +88,14 @@
         padding: 15px 40px 15px 40px;
         float: right;
         text-align: center;
+        color: $violet;
+
+        -webkit-transition: background-color .4s, color .4s;
+        -moz-transition: background-color .4s, color .4s;
+        &:hover{
+          background-color: $violet;
+          color: white;
+        }
       }
     }
   }

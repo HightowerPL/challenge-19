@@ -45,6 +45,7 @@
       -moz-box-shadow: 1px 1px 3px #000;
       -webkit-box-shadow: 1px 1px 3px #000;
       box-shadow: 1px 1px 3px #000;
+      -webkit-transition: background .4s, color .4s;
       -moz-transition: background .4s, color .4s; }
       .modalDialog .modalContent .close:hover {
         background: white;
@@ -78,7 +79,13 @@
         margin-top: 20px;
         padding: 15px 40px 15px 40px;
         float: right;
-        text-align: center; }
+        text-align: center;
+        color: #500e5e;
+        -webkit-transition: background-color .4s, color .4s;
+        -moz-transition: background-color .4s, color .4s; }
+        .modalDialog .modalContent .cityDescription .endLink:hover {
+          background-color: #500e5e;
+          color: white; }
 
 .cities {
   display: flex;
@@ -121,35 +128,21 @@
     background: #ebebeb url("../components/img/photo.png") no-repeat center center;
     background-size: 30% 25%; }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', sans-serif;
-  font-weight: 400;
+  font-weight: 400; }
+
+h1 {
   font-size: 80px; }
 
 h2 {
   color: #323232;
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 400;
   letter-spacing: 2px;
   font-size: 64px; }
 
 h3 {
   color: #323232;
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 400;
   font-size: 36px; }
-
-h4 {
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 400; }
-
-h5 {
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 400; }
-
-h6 {
-  font-family: 'Playfair Display', sans-serif;
-  font-weight: 400; }
 
 p {
   color: #323232;
@@ -169,6 +162,8 @@ span {
 header {
   font-family: 'Roboto', sans-serif;
   font-weight: 400; }
+  header .smallMenu p {
+    font-size: 18px; }
 
 .endLink {
   font-family: 'Open Sans', sans-serif;
@@ -218,6 +213,7 @@ form {
     width: 200px;
     border: 8px solid white;
     -moz-transition: transform .4s;
+    -webkit-transition: transform .4s;
     cursor: pointer;
     background: url("../components/img/slide1.jpg") no-repeat center center; }
     .slider .slidePrev:hover {
@@ -255,7 +251,8 @@ form {
     height: 450px;
     width: 200px;
     background: url("../components/img/slide3.jpg") no-repeat center center;
-    -moz-transition: transform .4s; }
+    -moz-transition: transform .4s;
+    -webkit-transition: transform .4s; }
     .slider .slideNext:hover {
       transform: scale(0.98); }
 
@@ -294,6 +291,8 @@ header {
     background-color: white;
     margin: 0 auto;
     cursor: pointer; }
+    header .smallMenu i {
+      color: #500e5e; }
   header .menu {
     padding: 0;
     display: block;
@@ -424,6 +423,7 @@ header {
   color: #500e5e;
   padding: 15px 55px 15px 55px;
   border: 2px solid #500e5e;
+  -webkit-transition: background-color .4s, color .4s;
   -moz-transition: background-color .4s, color .4s; }
   .endLink:hover {
     background-color: #500e5e;

@@ -40,6 +40,9 @@ header{
     background-color: white;
     margin: 0 auto;
     cursor: pointer;
+    i{
+      color: $violet;
+    }
   }
   .menu{
     padding: 0;
@@ -185,19 +188,17 @@ header{
     }
   }
 }
-
-
-
 .endLink{
   font-size: 16px;
   font-weight: 700;
   color: $violet;
   padding: 15px 55px 15px 55px;
   border: 2px solid $violet;
+  -webkit-transition: background-color .4s, color .4s;
   -moz-transition: background-color .4s, color .4s;
   &:hover{
     background-color: $violet;
-    color: $white;
+    color: white;
   }
 }
 .whitePanel{

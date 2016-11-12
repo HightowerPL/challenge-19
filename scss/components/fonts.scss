@@ -1,60 +1,46 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 400;
+}
+h1{
+ font-size: 80px;
+}
 
-  h1{
-   font-family: 'Playfair Display', sans-serif;
-   font-weight: 400;
-   font-size: 80px;
-  }
+h2{
+ color: #323232;
+ letter-spacing: 2px;
+ font-size: 64px;
+}
+h3{
+  color: #323232;
+  font-size: 36px;
+}
 
-  h2{
+p{
    color: #323232;
-   font-family: 'Playfair Display', sans-serif;
-   font-weight: 400;
-   letter-spacing: 2px;
-   font-size: 64px;
+   line-height: 1.5;
+   font-size: 17px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+}
+span{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   &.commas{
+     color:$violet;
+     font-family: 'Playfair Display', sans-serif;
+     font-weight: 400;
+   }
+}
+header{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  .smallMenu{
+    p{
+      font-size: 18px;
+    }
   }
-  h3{
-    color: #323232;
-   font-family: 'Playfair Display', sans-serif;
-   font-weight: 400;
-   font-size: 36px;
-  }
-
-  h4{
-   font-family: 'Playfair Display', sans-serif;
-   font-weight: 400;
-  }
-
-  h5{
-   font-family: 'Playfair Display', sans-serif;
-   font-weight: 400;
-  }
-
-  h6{
-   font-family: 'Playfair Display', sans-serif;
-   font-weight: 400;
-  }
-
-  p{
-     color: #323232;
-     line-height: 1.5;
-     font-size: 17px;
-     font-family: 'Open Sans', sans-serif;
-     font-weight: 300;
-  }
-  span{
-     font-family: 'Open Sans', sans-serif;
-     font-weight: 300;
-     &.commas{
-       color:$violet;
-       font-family: 'Playfair Display', sans-serif;
-       font-weight: 400;
-
-     }
-  }
-  header{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-  }
+}
 .endLink{
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -63,14 +49,12 @@ form{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
-
 .cityDescription{
   p{
     font-size: 14px;
     line-height: 2;
     color: $gray;
   }
-
 }
 .close {
   font-size: 1.25rem;

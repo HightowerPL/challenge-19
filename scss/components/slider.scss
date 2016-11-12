@@ -12,6 +12,7 @@
     width: 200px;
     border: 8px solid white;
     -moz-transition: transform .4s;
+    -webkit-transition: transform .4s;
     cursor: pointer;
     background: url('../components/img/slide1.jpg') no-repeat center center;
     &:hover{
@@ -55,6 +56,7 @@
     width: 200px;
     background: url('../components/img/slide3.jpg') no-repeat center center;
     -moz-transition: transform .4s;
+    -webkit-transition: transform .4s;
     &:hover{
       transform: scale(.98);
     }
