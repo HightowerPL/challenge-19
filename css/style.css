@@ -1,31 +1,3 @@
-.container, .container2 {
-  margin: 0 auto;
-  position: relative; }
-
-@media (min-width: 1100px) {
-  .container {
-    width: 800px; }
-  .container2 {
-    width: 1100px; } }
-
-@media (max-width: 640px) {
-  header {
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 20px; }
-    header .menu {
-      display: block;
-      margin: 0 auto;
-      padding: 0;
-      width: 100%; }
-      header .menu li {
-        text-align: center;
-        display: block;
-        padding: 0px 0 20px 0; }
-    header .menuSrc {
-      margin: 0 auto;
-      display: none; } }
-
 .modalDialog {
   position: fixed;
   z-index: 6;
@@ -41,27 +13,28 @@
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
-  pointer-events: none; }
+  pointer-events: none;
+  padding: 20px; }
   .modalDialog:target {
     opacity: 1;
     pointer-events: auto; }
   .modalDialog .modalContent {
-    display: inline-flex;
-    width: 1000px;
-    height: 600px;
-    margin: 10% auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #ebebeb;
-    padding: 10px; }
+    padding: 10px;
+    max-height: 95%;
+    overflow: scroll; }
     .modalDialog .modalContent .close {
       background: #500e5e;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: absolute;
-      right: -25px;
-      top: -25px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 99;
       width: 50px;
       height: 50px;
       text-decoration: none;
@@ -78,15 +51,10 @@
         color: #500e5e; }
     .modalDialog .modalContent .cityPhoto {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      align-content: space-between;
-      background-image: url("../components/img/ny.jpg");
-      background-repeat: no-repeat;
-      background-position: center center;
+      background: url("../components/img/ny.jpg") no-repeat center center;
       background-size: cover;
-      width: 50%;
-      height: 100%; }
+      padding: 60px 0 60px 0; }
       .modalDialog .modalContent .cityPhoto input[type='button'] {
         height: 100px;
         width: 50px;
@@ -101,9 +69,8 @@
         border-radius: 100px 0 0 100px;
         font-size: 20px; }
     .modalDialog .modalContent .cityDescription {
-      overflow: auto;
-      width: 50%;
-      padding: 5px 20px 13px 30px;
+      height: 100%;
+      padding: 5px 10px 13px 10px;
       background: white;
       text-align: left; }
       .modalDialog .modalContent .cityDescription .endLink {
@@ -242,66 +209,55 @@ form {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between; }
-
-.slidePrev {
-  position: relative;
-  height: 450px;
-  width: 500px;
-  border: 8px solid white;
-  -moz-transition: transform .4s;
-  cursor: pointer;
-  background: url("../components/img/slide1.jpg") no-repeat center center; }
-  .slidePrev:hover {
-    transform: scale(0.98); }
-  @media (min-width: 641px) and (max-width: 1099px) {
-    .slidePrev {
-      width: 150px; } }
-  @media (max-width: 640px) {
-    .slidePrev {
-      width: 75px; } }
-
-.slideMain {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  height: 450px;
-  width: 400px;
-  border: 8px solid #b3b3b3;
-  box-shadow: 0 0 5px #939393;
-  background: url("../components/img/slide2.jpg") no-repeat center center; }
-  .slideMain .quote {
+  align-items: center;
+  justify-content: center; }
+  .slider .slidePrev {
+    display: none;
     position: relative;
-    background-color: white;
+    height: 450px;
+    width: 200px;
+    border: 8px solid white;
+    -moz-transition: transform .4s;
+    cursor: pointer;
+    background: url("../components/img/slide1.jpg") no-repeat center center; }
+    .slider .slidePrev:hover {
+      transform: scale(0.98); }
+  .slider .slideMain {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     text-align: center;
-    padding: 80px 40px 50px 40px;
-    margin: 0 30px 30px 30px;
-    font-size: 15px; }
-    .slideMain .quote img {
-      position: absolute;
-      left: 30%;
-      top: -60px;
-      width: 120px;
-      height: 120px;
-      border-radius: 60px; }
-
-.slideNext {
-  position: relative;
-  cursor: pointer;
-  height: 450px;
-  width: 500px;
-  background: url("../components/img/slide3.jpg") no-repeat center center;
-  -moz-transition: transform .4s; }
-  .slideNext:hover {
-    transform: scale(0.98); }
-  @media (min-width: 641px) and (max-width: 1099px) {
-    .slideNext {
-      width: 150px; } }
-  @media (max-width: 640px) {
-    .slideNext {
-      width: 75px; } }
+    position: relative;
+    height: 450px;
+    width: 400px;
+    border: 8px solid #b3b3b3;
+    box-shadow: 0 0 5px #939393;
+    background: url("../components/img/slide2.jpg") no-repeat center center; }
+    .slider .slideMain .quote {
+      position: relative;
+      background-color: white;
+      text-align: center;
+      padding: 80px 40px 50px 40px;
+      margin: 0 30px 30px 30px;
+      font-size: 15px; }
+      .slider .slideMain .quote img {
+        position: absolute;
+        left: 30%;
+        top: -60px;
+        width: 120px;
+        height: 120px;
+        border-radius: 60px; }
+  .slider .slideNext {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    height: 450px;
+    width: 200px;
+    background: url("../components/img/slide3.jpg") no-repeat center center;
+    -moz-transition: transform .4s; }
+    .slider .slideNext:hover {
+      transform: scale(0.98); }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -318,58 +274,48 @@ a:link {
   color: inherit;
   text-decoration: none; }
 
-.smallMenu {
-  width: 100%;
-  height: 70px;
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  background-color: white;
-  margin: 0 auto;
-  cursor: pointer;
-  visibility: hidden; }
-  @media (max-width: 640px) {
-    .smallMenu {
-      visibility: visible; } }
-
 header {
   position: fixed;
   z-index: 5;
   width: 100%;
   top: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   background-color: white;
   color: #500e5e;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
-  header ul {
+  header .smallMenu {
+    width: 100%;
+    height: 70px;
+    z-index: 99;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: white;
+    margin: 0 auto;
+    cursor: pointer; }
+  header .menu {
+    padding: 0;
+    display: block;
     list-style-type: none; }
-    header ul li {
+    header .menu li {
       font-size: 18px;
-      color: #939393 !important;
-      display: inline-block;
-      padding-right: 60px;
-      vertical-align: middle; }
-      @media (min-width: 640px) and (max-width: 1100px) {
-        header ul li {
-          padding-right: 40px; } }
-      header ul li img {
+      width: 100%;
+      padding: 0 0 20px 0;
+      text-align: center;
+      color: #939393;
+      display: inline-block; }
+      header .menu li img {
         width: 50px;
         height: 50px; }
-      header ul li a:hover {
+      header .menu li a:hover {
         color: #500e5e; }
   header .menuSrc {
-    width: 180px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    float: right;
     padding: 7px 0 7px 0;
-    margin-right: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     border: 2px solid rgba(0, 0, 0, 0.2); }
     header .menuSrc .menuSrcSubmit {
       display: flex;
@@ -392,31 +338,11 @@ header {
       font-weight: 500;
       font-size: 12px;
       border: none; }
-  @media (min-width: 640px) and (max-width: 1100px) {
-    header {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row; } }
-  @media (max-width: 640px) {
-    header {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      padding-bottom: 20px; }
-      header .menu {
-        display: block;
-        margin: 0 auto;
-        padding: 0;
-        width: 100%; }
-        header .menu li {
-          text-align: center;
-          display: block;
-          padding: 0px 0 20px 0; } }
 
 .jumbotron {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   position: relative;
   color: white;
   height: 600px;
@@ -425,71 +351,72 @@ header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
-  .jumbotron h1 {
-    text-align: middle; }
-  .jumbotron .flightSearch {
+
+.flightSearch {
+  position: relative;
+  /*  position: absolute;
+  z-index: 3;
+  bottom: -105%;
+  width: 100%; */ }
+  .flightSearch form {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
     padding: 0;
     background-color: #500e5e;
     color: white;
-    position: absolute;
-    z-index: 3;
-    bottom: -105%;
-    width: 100%;
-    height: 150px; }
-    .jumbotron .flightSearch form {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      overflow: hidden;
-      height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    overflow: hidden; }
+    .flightSearch form .people {
       width: 100%;
-      padding: 0;
-      margin: 0; }
-      .jumbotron .flightSearch form .people {
-        height: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0 20px 0; }
+      .flightSearch form .people img {
+        width: 12px;
+        height: 12px; }
+      .flightSearch form .people input[type="number"] {
+        -moz-appearance: textfield;
+        overflow: visible;
+        font-size: 16px;
+        width: 50px;
+        background: url("../components/img/group-icon.png") no-repeat center left;
+        background-size: 25px 20px;
+        padding-left: 40px; }
+    .flightSearch form input {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      background-color: #500e5e;
+      color: white;
+      border: none;
+      margin: 0 0 0 0;
+      overflow: visible; }
+      .flightSearch form input[type="text"] {
+        width: 100%;
+        font-weight: 100;
+        margin: 20px 40px 20px 40px;
+        letter-spacing: 2px;
+        line-height: 2.5;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3); }
+      .flightSearch form input[type="date"] {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; }
-        .jumbotron .flightSearch form .people img {
-          width: 12px;
-          height: 12px; }
-        .jumbotron .flightSearch form .people input[type="number"] {
-          -moz-appearance: textfield;
-          overflow: visible;
-          font-size: 16px;
-          width: 50px;
-          background: url("../components/img/group-icon.png") no-repeat center left;
-          background-size: 25px 20px;
-          padding-left: 40px; }
-      .jumbotron .flightSearch form input {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
-        background-color: #500e5e;
-        color: white;
-        border: none;
-        margin: 0 0 0 0;
-        overflow: visible; }
-        .jumbotron .flightSearch form input[type="text"] {
-          font-weight: 100;
-          margin: 0 40px 0 40px;
-          letter-spacing: 2px;
-          line-height: 2.5;
-          border-bottom: 2px solid rgba(255, 255, 255, 0.3); }
-        .jumbotron .flightSearch form input[type="date"] {
-          background: url("../components/img/calendar-icon.png") no-repeat center left;
-          background-size: 20px 20px;
-          width: 90px;
-          padding-left: 40px; }
-        .jumbotron .flightSearch form input[type="submit"] {
-          box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3);
-          justify-content: flex-end;
-          background-color: #69157a;
-          font-size: 36px;
-          cursor: pointer;
-          min-width: 100px;
-          height: 100%; }
+        justify-content: center;
+        background: url("../components/img/calendar-icon.png") no-repeat center left;
+        background-size: 20px 20px;
+        padding: 0px 0 0px 40px;
+        margin: 20px 0 20px 0; }
+      .flightSearch form input[type="submit"] {
+        box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.3);
+        justify-content: flex-end;
+        background-color: #69157a;
+        font-size: 36px;
+        cursor: pointer;
+        width: 100%;
+        height: 100%; }
 
 .endLink {
   font-size: 16px;
@@ -592,3 +519,135 @@ footer {
   footer img {
     margin: 0 auto;
     width: 150px; }
+
+.container, .container2, .container3 {
+  margin: 0 auto;
+  position: relative; }
+
+@media (min-width: 640px) {
+  .container2 {
+    width: 640px; }
+  header {
+    flex-direction: row;
+    justify-content: space-between; }
+    header .smallMenu {
+      display: none; }
+    header .menu {
+      margin-left: 20px;
+      display: inline-flex;
+      align-items: center; }
+      header .menu li {
+        padding-right: 30px;
+        padding-bottom: 0; }
+    header .menuSrc {
+      margin: 0 20px 0 0; }
+  .flightSearch form {
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    /*
+      position: absolute;
+      top:0;
+      z-index:5;*/ }
+    .flightSearch form .people {
+      padding: 0;
+      width: 75px; }
+    .flightSearch form input[type="text"] {
+      margin: 0 0 0 10px;
+      width: 100px; }
+    .flightSearch form input[type="date"] {
+      padding-left: 25px;
+      margin: 0;
+      width: 100px; }
+    .flightSearch form input[type="submit"] {
+      justify-content: flex-end;
+      width: 75px;
+      height: 100%; } }
+
+@media (min-width: 900px) {
+  .container {
+    width: 85%; }
+  .container2 {
+    width: 90%; }
+  .flightSearch form {
+    position: absolute;
+    top: -75px;
+    left: 5%;
+    z-index: 4;
+    width: 90%; }
+    .flightSearch form .people {
+      padding: 0;
+      width: 10%; }
+    .flightSearch form input[type="text"] {
+      margin: 0 0 0 30px;
+      width: 15%; }
+    .flightSearch form input[type="date"] {
+      padding-left: 30px;
+      margin: 0 0 0 10px;
+      width: 15%; }
+    .flightSearch form input[type="submit"] {
+      justify-content: flex-end;
+      width: 10%;
+      height: 100%; }
+  .modalDialog .modalContent {
+    position: relative;
+    width: 950px;
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: visible; }
+    .modalDialog .modalContent .close {
+      position: absolute;
+      top: -25px;
+      right: -25px; }
+    .modalDialog .modalContent .cityPhoto {
+      width: 50%;
+      align-items: center;
+      padding: 0; }
+    .modalDialog .modalContent .cityDescription {
+      width: 50%; }
+  .slider {
+    width: 100%;
+    justify-content: space-between; }
+    .slider .slidePrev {
+      display: inline; }
+    .slider .slideNext {
+      display: inline; } }
+
+@media (min-width: 1100px) {
+  .container {
+    width: 800px; }
+  .container2 {
+    width: 1100px; }
+  header {
+    flex-direction: row;
+    justify-content: space-between; }
+    header .smallMenu {
+      display: none; }
+    header .menu {
+      display: inline-flex; }
+      header .menu li {
+        padding-right: 60px; }
+    header .menuSrc {
+      width: 175px; }
+  .flightSearch {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto; }
+    .flightSearch form {
+      width: 100%;
+      left: 0;
+      margin: 0 auto; }
+  .modalDialog .modalContent {
+    position: relative;
+    width: 1100px; }
+  .slider {
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 1500px; }
+    .slider .slidePrev {
+      display: inline;
+      width: 400px; }
+    .slider .slideNext {
+      display: inline;
+      width: 400px; } }

@@ -1,5 +1,13 @@
 var field = document.getElementById('numField');
 
+$(document).ready(function(){
+  $(".menu, .menuSrc").hide();
+
+  if ($(window).width() >= 640) {
+    $(".menu, .menuSrc").show();
+  }
+});
+
 $('#up').on('click', function(){
    field.stepUp(1);
    return false;
@@ -17,5 +25,5 @@ $(document).ready(function(){
 });
 */
  $(".smallMenuButton").click(function(){
-    $("header").slideToggle(800);
+    $(".menu, .menuSrc").slideToggle(800);
  });

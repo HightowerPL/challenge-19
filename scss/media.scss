@@ -1,6 +1,139 @@
-.container, .container2{
+.container, .container2, .container3{
   margin: 0 auto;
   position: relative;
+
+}
+
+@media (min-width: 640px) {
+  .container2{
+    width: 640px;
+  }
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+    .smallMenu{
+      display: none;
+    }
+    .menu{
+      margin-left: 20px;
+      display: inline-flex;
+      align-items: center;
+      li{
+        padding-right: 30px;
+        padding-bottom: 0;
+      }
+    }
+    .menuSrc{
+      margin: 0 20px 0 0;
+    }
+  }
+  .flightSearch{
+    form{
+      height: 150px;
+      justify-content: space-between;
+      align-items: center;
+      /*
+      position: absolute;
+      top:0;
+      z-index:5;*/
+      .people{
+        padding: 0;
+        width: 75px;
+      }
+      input{
+        &[type="text"]{
+          margin: 0 0 0 10px;
+          width: 100px;
+        }
+        &[type="date"]{
+          padding-left: 25px;
+          margin: 0;
+          width: 100px;
+        }
+        &[type="submit"]{
+          justify-content: flex-end;
+          width: 75px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .container{
+    width: 85%;
+  }
+  .container2{
+    width: 90%;
+  }
+  .container3{
+//    width: 100%;
+  }
+  .flightSearch{
+    form {
+      position: absolute;
+      top:-75px;
+      left: 5%;
+      z-index:4;
+      width:90%;
+      .people{
+        padding: 0;
+        width: 10%;
+      }
+      input{
+        &[type="text"]{
+          margin: 0 0 0 30px;
+          width: 15%;
+        }
+        &[type="date"]{
+          padding-left: 30px;
+          margin: 0 0 0 10px;
+          width: 15%;
+        }
+        &[type="submit"]{
+          justify-content: flex-end;
+          width: 10%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .modalDialog{
+    .modalContent{
+      position: relative;
+      width: 950px;
+      overflow: auto;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: visible;
+      .close{
+        position: absolute;
+        top: -25px;
+        right:-25px;
+      }
+      .cityPhoto{
+        width:50%;
+        align-items: center;
+        padding: 0;
+      }
+      .cityDescription{
+        width:50%;
+      }
+    }
+  }
+  .slider{
+    width: 100%;
+    justify-content: space-between;
+    .slidePrev{
+      display: inline;
+    }
+    .slideMain{
+    }
+    .slideNext{
+      display: inline;
+    }
+  }
 }
 
 @media (min-width: 1100px) {
@@ -10,27 +143,52 @@
   .container2 {
     width:1100px;
   }
-}
 
-@media (max-width: 640px) {
   header{
-    flex-direction: column;
-    justify-content: space-around;
-    padding-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    .smallMenu{
+      display: none;
+    }
     .menu{
-      display: block;
-      margin: 0 auto;
-      padding: 0;
-      width: 100%;
+      display: inline-flex;
       li{
-        text-align: center;
-        display: block;
-        padding: 0px 0 20px 0;
+        padding-right: 60px;
       }
     }
     .menuSrc{
+      width: 175px;
+    }
+  }
+  .flightSearch{
+    display: flex;
+    width:1100px;
+    margin: 0 auto;
+    form{
+      width: 100%;
+      left:0;
       margin: 0 auto;
-      display: none;
+    }
+  }
+  .modalDialog{
+    .modalContent{
+      position: relative;
+      width: 1100px;
+    }
+  }
+  .slider{
+    margin:0 auto;
+    margin-top: 100px;
+    max-width: 1500px;
+    .slidePrev{
+      display: inline;
+      width: 400px
+    }
+    .slideMain{
+    }
+    .slideNext{
+      display: inline;
+      width: 400px
     }
   }
 }

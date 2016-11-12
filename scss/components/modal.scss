@@ -14,27 +14,29 @@
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
   pointer-events: none;
+  padding: 20px;
+
   &:target {
       opacity:1;
       pointer-events: auto;
   }
    .modalContent {
-     display: inline-flex;
-     width: 1000px;
-     height: 600px;
-     margin: 10% auto;
-     position: relative;
+     display: flex;
+     flex-direction: column;
      background-color: #ebebeb;
      padding: 10px;
+     max-height: 95%;
+     overflow: scroll;
      .close {
          background: $violet;
          color: $white;
          display: flex;
          align-items: center;
          justify-content: center;
-         position: absolute;
-         right: -25px;
-         top: -25px;
+         position: fixed;
+         top: 0;
+         right: 0;
+         z-index: 99;
          width: 50px;
          height: 50px;
          text-decoration: none;
@@ -53,15 +55,10 @@
      }
      .cityPhoto{
        display: flex;
-       align-items: center;
        justify-content: space-between;
-       align-content: space-between;
-       background-image: url("../components/img/ny.jpg");
-       background-repeat:no-repeat;
-       background-position: center center;
+       background: url("../components/img/ny.jpg") no-repeat center center;
        background-size: cover;
-       width: 50%;
-       height: 100%;
+       padding: 60px 0 60px 0;
        input[type='button']{
          height: 100px;
          width:50px;
@@ -80,9 +77,8 @@
        }
      }
     .cityDescription{
-      overflow: auto;
-      width: 50%;
-      padding: 5px 20px 13px 30px;
+      height: 100%;
+      padding: 5px 10px 13px 10px;
       background: $white;
       text-align: left;
       .endLink{

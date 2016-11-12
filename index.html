@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display|Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
   </head>
   <body>
-    <div class="smallMenu">
-      <p class="smallMenuButton"><strong>Menu</strong></p>
-    </div>
+
     <header>
+      <div class="smallMenu">
+        <p class="smallMenuButton"><strong>Menu</strong></p>
+      </div>
       <ul class="menu">
         <li class="logo"><a href="#"><img src="components/img/logo.png" alt="logo"></a></li>
         <li><a href="#">Flights</a></li>
@@ -30,25 +32,27 @@
     <section class="jumbotron">
       <div class="container2">
         <h1>Fly with us</h1>
-        <div class="flightSearch">
-          <form>
-            <input type="text" placeholder="Current City">
-            <input type="text" placeholder="Destination City">
-            <input type="date" placeholder="YYYY-MM-DD">
-            <input type="date" placeholder="YYYY-MM-DD">
-            <div class="people">
-              <img class="arrowUp" id="up"  src="components/img/arrowUP.png">
-              <input type="number" id="numField" class="peopleNumber" min="1" max="9" step="1" value="1">
-              <img class="arrowDown" id="down" src="components/img/arrowDOWN.png">
-            </div>
-            <input type="submit" value=">">
-            <!--<div class="arrow">
-              arr
-            </div>-->
-          </form>
-        </div>
       </div>
     </section>
+
+    <section class="flightSearch">
+      <form>
+        <input type="text" placeholder="Current City">
+        <input type="text" placeholder="Destination">
+        <input type="date" placeholder="YY/MM/DD">
+        <input type="date" placeholder="YY/MM/DD">
+        <div class="people">
+          <img class="arrowUp" id="up"  src="components/img/arrowUP.png">
+          <input type="number" id="numField" class="peopleNumber" min="1" max="9" step="1" value="1">
+          <img class="arrowDown" id="down" src="components/img/arrowDOWN.png">
+        </div>
+        <input type="submit" value=">">
+        <!--<div class="arrow">
+          arr
+        </div>-->
+      </form>
+    </section>
+
 
     <section class="whitePanel wp1">
       <div class="container">
@@ -147,20 +151,20 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
-      <div class="slider">
-        <div class="slidePrev">
-        </div>
+        <div class="slider">
+          <div class="slidePrev">
+          </div>
 
-        <div class="slideMain">
-          <p class="quote">
-            <img class="quoteAvatar" src="components/img/avatar2.jpg" alt="avatar"/>
-            <span class="markBegin">,,</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<span class="markEnd">,,</span>
-          </p>
-        </div>
+          <div class="slideMain">
+            <p class="quote">
+              <img class="quoteAvatar" src="components/img/avatar2.jpg" alt="avatar"/>
+              <span class="markBegin">,,</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<span class="markEnd">,,</span>
+            </p>
+          </div>
 
-        <div class="slideNext">
+          <div class="slideNext">
+          </div>
         </div>
-      </div>
 
       <h1><span class="commas">,,</span><br>We had the experience of our life.</h1><br/><br/>
       <a href="#" class="endLink">GET STARTED</a>
