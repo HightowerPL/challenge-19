@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Travel Website - Weekly WebDev Challenge #19</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display|Roboto:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
@@ -25,7 +25,7 @@
       </ul>
       <form class="menuSrc">
         <input class="menuSrcSubmit" id="search_submit" value=""  type="submit">
-        <input class="menuSrcText" id="search" name="SEARCH"placeholder='SEARCH' type="text" value="" >
+        <input class="menuSrcText" id="search" name="SEARCH" placeholder='SEARCH' type="text" value="" >
       </form>
     </header>
 
@@ -35,23 +35,23 @@
       </div>
     </section>
 
-    <section class="flightSearch">
+    <div class="flightSearch">
       <form>
         <input type="text" placeholder="Current City">
         <input type="text" placeholder="Destination">
-        <input type="date" placeholder="YY/MM/DD">
-        <input type="date" placeholder="YY/MM/DD">
+        <input type="date" value="YY/MM/DD">
+        <input type="date" value="YY/MM/DD">
         <div class="people">
-          <img class="arrowUp" id="up"  src="components/img/arrowUP.png">
+          <img class="arrowUp" id="up"  src="components/img/arrowUP.png" alt="arrow up">
           <input type="number" id="numField" class="peopleNumber" min="1" max="9" step="1" value="1">
-          <img class="arrowDown" id="down" src="components/img/arrowDOWN.png">
+          <img class="arrowDown" id="down" src="components/img/arrowDOWN.png" alt="arrow down">
         </div>
         <input type="submit" value=">">
         <!--<div class="arrow">
           arr
         </div>-->
       </form>
-    </section>
+    </div>
 
 
     <section class="whitePanel wp1">
@@ -66,8 +66,8 @@
       </div>
     </section>
 
-    <section class="pause p1">
-    </section>
+    <div class="pause p1">
+    </div>
 
     <section class="whitePanel wp2">
       <div class="container">
@@ -121,10 +121,11 @@
           </div>
 
       </div>
-      <a href="#" class="endLink">VIEW MORE</a>
+    </div>
+    <a href="#" class="endLink">VIEW MORE</a>
     </section>
-    <div id="openModal" class="modalDialog">
 
+    <div id="openModal" class="modalDialog">
         <div class="modalContent">
           <a href="#close" title="Close" class="close">+</a>
           <div id="cityPhoto" class="cityPhoto">
@@ -137,10 +138,10 @@
             <a href="#" class="endLink">BOOK FLIGHT</a>
           </div>
         </div>
+    </div>
 
-  </div>
-    <section class="pause p2">
-    </section>
+    <div class="pause p2">
+    </div>
 
     <section class="whitePanel wp3">
       <div class="container">
@@ -171,7 +172,7 @@
     </section>
 
     <footer class="pause">
-      <img src="components/img/signature.png"/>
+      <img src="components/img/signature.png" alt="Harris Imran">
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/cities.js"></script>

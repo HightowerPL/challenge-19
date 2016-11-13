@@ -2,10 +2,11 @@ var field = document.getElementById('numField');
 
 $(document).ready(function(){
   $(".menu, .menuSrc").hide();
-
-  if ($(window).width() >= 640) {
-    $(".menu, .menuSrc").show();
-  }
+  $(window).on('resize', function(){
+    if ($(window).width() >= 640) {
+      $(".menu, .menuSrc").show();
+    }
+  });
 });
 
 $('#up').on('click', function(){
