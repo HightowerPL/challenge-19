@@ -119,7 +119,7 @@
   left: 62.5px;
   width: 225px;
   height: 225px;
-  transition: transform 1s; }
+  transition: transform .4s; }
   .photo.pOne {
     background-color: #ebebeb; }
   .photo.pTwo {
@@ -133,12 +133,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 h1 {
-  font-size: 80px; }
+  font-size: 76px; }
 
 h2 {
   color: #323232;
   letter-spacing: 2px;
-  font-size: 64px; }
+  font-size: 60px; }
 
 h3 {
   color: #323232;
@@ -261,6 +261,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
+*:focus {
+  outline: none; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -312,7 +315,7 @@ header {
   header .menuSrc {
     display: flex;
     flex-direction: row;
-    padding: 7px 0 7px 0;
+    padding: 7px;
     margin: 0 auto;
     margin-bottom: 20px;
     border: 2px solid rgba(0, 0, 0, 0.2); }
@@ -320,8 +323,9 @@ header {
       display: flex;
       background: url("../components/img/search-icon.png") no-repeat center center;
       background-size: 15px 15px;
+      padding: 0;
       border: none;
-      width: 100%;
+      width: 10%;
       cursor: pointer;
       flex-grow: 1;
       -moz-transition: transform .4s;
@@ -329,8 +333,9 @@ header {
       header .menuSrc .menuSrcSubmit:hover {
         transform: scale(1.1); }
     header .menuSrc .menuSrcText {
+      width: 70%;
       flex-grow: 3;
-      padding-left: 5px;
+      margin-right: 8px;
       display: flex;
       color: #500e5e;
       font-family: 'Roboto', sans-serif;
@@ -341,7 +346,7 @@ header {
 .jumbotron {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
   color: white;
   height: 600px;
@@ -630,6 +635,8 @@ footer {
         padding-right: 60px; }
     header .menuSrc {
       width: 175px; }
+  .jumbotron {
+    justify-content: flex-start; }
   .flightSearch {
     display: flex;
     width: 1100px;

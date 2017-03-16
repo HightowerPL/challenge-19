@@ -15,7 +15,6 @@
   transition: opacity 400ms ease-in;
   pointer-events: none;
   padding: 20px;
-
   &:target {
       opacity:1;
       pointer-events: auto;
